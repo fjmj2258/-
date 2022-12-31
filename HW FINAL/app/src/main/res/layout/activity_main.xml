@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView android:text="經緯度" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txv"
+        android:background="#000"
+        android:textColor="#fff" />
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/map" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <Spinner
+            android:layout_width="93dp"
+            android:layout_height="match_parent"
+            android:id="@+id/spinner"
+            android:entries="@array/meals" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="抽選"
+            android:id="@+id/button"
+            android:onClick="Lottery" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="導航"
+            android:id="@+id/button2"
+            android:onClick="Navigation" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查詢餐廳"
+            android:id="@+id/button3"
+            android:onClick="Inquire" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.45">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="抽選的地點:"
+            android:id="@+id/textView2"
+            android:textColor="#0400ff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="隨機抽取的地方"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ff0000" />
+
+    </LinearLayout>
+
+</LinearLayout>
